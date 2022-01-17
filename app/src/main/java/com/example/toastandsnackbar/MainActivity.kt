@@ -18,11 +18,14 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnSnackbar.setOnClickListener {
-
+            val snackbar = Snackbar.make(binding.root, "berhasil muncul", Snackbar.LENGTH_INDEFINITE)
+            snackbar.setAction("Retry"){
+                Snackbar.make(binding.root, "retry di pencet", Snackbar.LENGTH_SHORT).show()
+            }.show()
         }
 
         binding.btnToast.setOnClickListener {
-
+            Toast.makeText(this, "Button Toast Di click", Toast.LENGTH_SHORT).show()
         }
     }
 }
